@@ -1,19 +1,21 @@
-import { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import { useState } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import { Button } from "./components/button/Button";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>Hello Vite + React!</p>
+        <p>Count: {count}</p>
         <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
+          <Button onClick={() => setCount((count) => count + 1)}>
+            Add to Count
+          </Button>
         </p>
         <p>
           Edit <code>App.tsx</code> and save to test HMR updates.
@@ -27,7 +29,7 @@ function App() {
           >
             Learn React
           </a>
-          {' | '}
+          {" | "}
           <a
             className="App-link"
             href="https://vitejs.dev/guide/features.html"
@@ -39,7 +41,7 @@ function App() {
         </p>
       </header>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
