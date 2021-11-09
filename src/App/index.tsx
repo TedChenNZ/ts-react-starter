@@ -5,7 +5,8 @@ const AppWrapper = styled.div`
 `;
 
 function App() {
-  return <AppWrapper>{new Date().toISOString()}</AppWrapper>;
+  const date = new Date().toISOString();
+  return <AppWrapper>{date}</AppWrapper>;
 }
 
 export default App;
